@@ -1,0 +1,5 @@
+---
+# defaults file for acme-tiny-install/
+http_proxy: ""
+default__acme__tiny__checksum: "sha256:1abae6ea2045dd2490b8671c98e24bc82706df125fd171ce82b76d89c2bf3f46"
+default__acme__tiny__download_upstream: "https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme\_tiny.py"

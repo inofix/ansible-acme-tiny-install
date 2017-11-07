@@ -1,0 +1,58 @@
+galaxy_info:
+  author: Michael Lustenberger
+  description: Install the famous acme-tiny python script
+  company: INOFIX GmbH
+  # issue_tracker_url: http://example.com/issue/tracker
+  license: license (GPLv3)
+  min_ansible_version: 2.0.0
+  #github_branch:
+  platforms:
+  - name: OpenBSD
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: GenericBSD
+    versions:
+    - all
+  - name: Void Linux
+    versions:
+    - all
+  - name: GenericLinux
+    versions:
+    - all
+  - name: ArchLinux
+    versions:
+    - all
+  - name: FreeBSD
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  - name: opensuse
+    versions:
+    - all
+  - name: SLES
+    versions:
+    - all
+  - name: GenericUNIX
+    versions:
+    - all
+  - name: Solaris
+    versions:
+    - all
+
+  galaxy_tags:
+    - acme:acme-tiny:acmetiny
+    - cert:certs:certificate:certificates
+    - letsencrypt
+    - ssl:tls
+    - system
+
+dependencies:
+  - { role: inofix.yapkg, yapkg_group_name: 'acme-tiny', yapkg_names: [ 'acme-tiny' ], ignore_errors: True }

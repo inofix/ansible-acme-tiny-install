@@ -1,0 +1,25 @@
+---
+# tasks file for acme-tiny-install/
+- name: Test for an installation by the distro in /bin
+  stat:
+    path: "/bin/acme-tiny"
+  register: acme_tiny__bin
+
+- name: Test for an installation by the distro in /usr/bin
+  stat:
+    path: "/usr/bin/acme-tiny"
+  register: acme_tiny__usrbin
+  when: acme_tiny__bin.stat.isreg is not defined or not acme_tiny__bin.stat.isreg
+
+- name: Manually install acme-tiny
+  environment:
+    http_proxy: "{{ http_proxy }}"
+  get_url:
+    checksum: "{{ acme__tiny__checksum }}"
+    dest: "/usr/local/bin/acme-tiny"
+    url: "{{ acme__tiny__download_upstream }}"
+    owner: "root"
+    group: "root"
+    mode: "0755"
+  when: ( acme_tiny__bin.stat.isreg is not defined or not acme_tiny__bin.stat.isreg ) and ( acme_tiny__usrbin.stat.isreg is not defined or not acme_tiny__usrbin.stat.isreg )
+

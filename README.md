@@ -3,7 +3,7 @@ Acme-Tiny Install
 
 This is an ansible role for installing acme-tiny, first by trying the distro way but, if this is not working, by directly getting the source from 'diafygi' on github - this can be overridden if an URL/Checksum is specified.
 
-The role is meant to be run on the host that will later also play the inofix.ansible-acme-tiny-setup and the inofix.ansible-acme-tiny-sign role.
+The role is meant to be run on the host that will later also play the inofix.acme-tiny-setup and the inofix.acme-tiny-sign role.
 
 Why we do not use one of the existing roles?
 
@@ -25,7 +25,7 @@ If radical changes should become necessary, a new role will be created, probably
 Installation
 ------------
 
- # ansible-galaxy install inofix.ansible-acme-tiny-install
+ # ansible-galaxy install inofix.acme-tiny-install
 
 Requirements
 ------------
@@ -53,7 +53,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - inofix.ansible-acme-tiny-install
+         - inofix.acme-tiny-install
 
 License
 -------

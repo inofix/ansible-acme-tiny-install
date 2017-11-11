@@ -23,6 +23,7 @@ install:
 
   # Install ansible role dependencies
   - ansible-galaxy install inofix.yapkg
+  - ansible-galaxy install inofix.acme-setup
 
 script:
   # Basic role syntax check

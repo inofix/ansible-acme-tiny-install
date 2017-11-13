@@ -2,3 +2,4 @@
 # vars file for acme-tiny-install/
 acme__tiny__checksum: '{{ app__acme__tiny__checksum | d(default__acme__tiny__checksum) }}'
 acme__tiny__download_upstream: '{{ app__acme__tiny__download_upstream | d(default__acme__tiny__download_upstream) }}'
+acme__bin_dir: '{{ app__acme__bin_dir | d(default__acme__bin_dir) }}'

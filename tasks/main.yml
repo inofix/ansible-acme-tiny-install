@@ -16,7 +16,7 @@
     http_proxy: "{{ http_proxy }}"
   get_url:
     checksum: "{{ acme__tiny__checksum }}"
-    dest: "/usr/local/bin/acme-tiny"
+    dest: "{{ acme__bin_dir }}/acme-tiny"
     url: "{{ acme__tiny__download_upstream }}"
     owner: "root"
     group: "root"

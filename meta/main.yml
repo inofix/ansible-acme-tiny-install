@@ -55,4 +55,4 @@ galaxy_info:
     - system
 
 dependencies:
-  - { role: inofix.yapkg, yapkg_group_name: 'acme-tiny', yapkg_names: [ 'acme-tiny' ], ignore_errors: True }
+#does not work propperly as distro is to slow sometimes - { role: inofix.yapkg, yapkg_group_name: 'acme-tiny', yapkg_names: [ 'acme-tiny' ], ignore_errors: True }
